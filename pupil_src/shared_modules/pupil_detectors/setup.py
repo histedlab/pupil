@@ -90,6 +90,7 @@ else:
         "/usr/local/opt/opencv/include",  # old opencv brew (v3)
         "/usr/local/opt/opencv@3/include",  # new opencv@3 brew
         "/usr/local/include/opencv4",  # new opencv brew (v4)
+        os.path.join(os.getenv('CONDA_PREFIX'), 'include/opencv4'),
     ]
     opencv_core_found = any(
         os.path.isfile(path + "/libopencv_core.so") for path in opencv_library_dirs
@@ -109,6 +110,7 @@ else:
         np.get_include(),
         "/usr/local/include/eigen3",
         "/usr/include/eigen3",
+        os.path.join(os.getenv('CONDA_PREFIX'), 'include/eigen3'),
         shared_cpp_include_path,
         singleeyefitter_include_path,
     ] + opencv_include_dirs

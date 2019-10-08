@@ -1,0 +1,33 @@
+name: mh37b-pupil
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - cysignals
+  - cython
+  - msgpack-python=0.5.6
+  - opencv # normally homebrew
+  - numexpr 
+  - packaging
+  - psutil
+  - pyaudio
+  - pyopengl
+  - pyzmq
+  - scipy
+  - cmake # normally pulled in by homebrew
+  - ffmpeg # "
+  - libjpeg-turbo # normally homebrew
+  - pytorch # from pytorch channel
+  - torchvision # from pytorch channel
+
+  # do pip install manually, based on github pupil instructions
+  #- pip:
+  #  - git+https://github.com/zeromq/pyre
+  # - pupil_apriltags
+  #  - git+https://github.com/pupil-labs/PyAV
+  #  - git+https://github.com/pupil-labs/pyuvc
+  #  - git+https://github.com/pupil-labs/pyndsi
+  #  - git+https://github.com/pupil-labs/pyglui
+  #  - git+https://github.com/pupil-labs/nslr
+  # - git+https://github.com/pupil-labs/nslr-hmm
